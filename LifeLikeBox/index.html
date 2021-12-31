@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Boxes</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=620 height=1104 style="width: 620px; height: 1104px; background: #231F20"></canvas>
+    <script src="Build/LifeLikeBox.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/LifeLikeBox.data.br",
+        frameworkUrl: "Build/LifeLikeBox.framework.js.br",
+        codeUrl: "Build/LifeLikeBox.wasm.br",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "Boxes",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
